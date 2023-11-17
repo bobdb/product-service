@@ -35,7 +35,7 @@ public class ProductController {
     @ResponseStatus(HttpStatus.CREATED)
     public void createProduct(@RequestBody ProductRequest productRequest) {
         productService.createProduct(ProductMapper.mapToObject(productRequest));
-        log.info("Product {} is saved again", productRequest.getName());
+        log.info("Product {} is saved", productRequest.getName());
     }
 
 }
